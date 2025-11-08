@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Timer Pro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1"
+  }
+}
+</script>
+<style>
+  @media print {
+    body {
+      background-color: #ffffff !important;
+      color: #000000 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Hide UI elements that shouldn't be printed */
+    .print-hidden {
+      display: none !important;
+    }
+
+    /* General print styles for components */
+    .print-bg-white { background-color: #ffffff !important; }
+    .print-text-black { color: #000000 !important; }
+    .print-border-gray { border-color: #cccccc !important; }
+    .print-shadow-none { box-shadow: none !important; }
+    
+    /* Ensure cards and tables use full page width and don't get cut off */
+    main.grid {
+      display: block !important;
+    }
+
+    div[class*="bg-gray-800"] {
+      background-color: #ffffff !important;
+      border: 1px solid #eeeeee !important;
+      box-shadow: none !important;
+    }
+    
+    h1, h2, h3, h4, h5, h6, [class*="text-cyan"] {
+        color: #000000 !important;
+    }
+    
+    table, th, td {
+        border-color: #cccccc !important;
+    }
+    
+    th, td {
+        color: #000000 !important;
+    }
+    
+    .athlete-card {
+        page-break-inside: avoid;
+    }
+  }
+</style>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-gray-900 text-white antialiased">
+  <div id="root"></div>
+  <script type="module" src="index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
